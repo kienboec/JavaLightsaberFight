@@ -6,8 +6,8 @@ import bif3.swe1.tdd.fighter.Fighter;
 import java.util.Optional;
 
 public class Combat {
-    private Fighter opponentA;
-    private Fighter opponentB;
+    private final Fighter opponentA;
+    private final Fighter opponentB;
 
     public Combat(Fighter opponentA, Fighter opponentB) {
         this.opponentA = opponentA;
@@ -25,7 +25,7 @@ public class Combat {
     private Optional<Fighter> limitedFightImplementation(boolean checkTurns, int turns) {
         System.out.printf("%s fights against %s\n", opponentA.getName(), opponentB.getName());
         System.out.println("Let the fight begin!");
-        for (int turn = 1; ((!checkTurns) || turn < turns) &&
+        for (int turn = 1; ((!checkTurns) || turn <= turns) &&
                 (!opponentA.isDead()) &&
                 (!opponentB.isDead()); turn++) {
 

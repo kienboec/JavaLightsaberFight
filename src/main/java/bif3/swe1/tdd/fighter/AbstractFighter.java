@@ -8,20 +8,18 @@ import lombok.ToString;
 public abstract class AbstractFighter implements Fighter {
 
     @Getter
-    private String name;
+    private final String name;
+
+    @Getter
+    private final Lightsaber lightsaber;
 
     @Getter
     private int vitality;
 
-    @Getter
-    private Lightsaber lightsaber;
-
     public AbstractFighter(String name, int vitality) {
         this.name = name;
         this.vitality = vitality;
-
-        this.lightsaber = new Lightsaber();
-        lightsaber.setBelongTo(name);
+        this.lightsaber = new Lightsaber().setBelongTo(name);
     }
 
     public void changeVitality(int change) {

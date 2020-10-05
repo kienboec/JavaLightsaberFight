@@ -12,7 +12,7 @@ public class Lightsaber {
         color = LightsaberColor.NONE;
     }
 
-    public void setBelongTo(String fighter) {
+    public Lightsaber setBelongTo(String fighter) {
         color = switch( fighter ) {
             case "Luke" -> LightsaberColor.GREEN;
             case "Darth" -> LightsaberColor.RED;
@@ -36,6 +36,8 @@ public class Lightsaber {
                 color = LightsaberColor.NONE;
                 break;
         }*/
+
+        return this;
     }
 
 }

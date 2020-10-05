@@ -6,19 +6,23 @@ import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
-        Luke luke = new Luke();
-        DarthVader darthVader = new DarthVader();
+        Optional<Fighter> winningFighter = createCombat(
+                new Luke(),
+                new DarthVader()).fightForLifeAndDeath();
 
-        Combat combat1 = new Combat(luke, darthVader);
-        Optional<Fighter> winner = combat1.fightForLifeAndDeath();
+        if (winningFighter.isEmpty()) {
+            return;
+        }
 
         System.out.println("--------");
 
-        if (!winner.isEmpty()) {
-            Yoda yoda = new Yoda();
+        createCombat(
+                new Yoda(),
+                winningFighter.get()).limitedFight(10);
 
-            Combat combat2 = new Combat(yoda, winner.get());
-            combat2.limitedFight(10);
-        }
+    }
+
+    public static Combat createCombat(Fighter f1, Fighter f2) {
+        return new Combat(f1, f2);
     }
 }

@@ -12,6 +12,8 @@ public class SimpleLightsaberTest {
     public void testGetColor_LukeShouldBeGreen() {
         Lightsaber lightsaber = new Lightsaber();
         lightsaber.setBelongTo("Luke");
+
+        // can be simplified
         assertTrue( lightsaber.getColor() == LightsaberColor.GREEN, "Lukes lightsaber color should be GREEN" );
     }
 
@@ -19,6 +21,8 @@ public class SimpleLightsaberTest {
     public void testGetColor_DarthShouldBeRed() {
         Lightsaber lightsaber = new Lightsaber();
         lightsaber.setBelongTo("Darth");
+
+        // can be simplified
         assertFalse( lightsaber.getColor() != LightsaberColor.RED, "Darths lightsaber color should be RED" );
     }
 
