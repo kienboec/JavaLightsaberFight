@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="148.0" y="473.0">bif3.swe1.tdd.fighter.Luke</node>
+    <node x="467.0" y="0.0">bif3.swe1.tdd.Combat</node>
+    <node x="0.0" y="617.0">bif3.swe1.tdd.weapon.Lightsaber</node>
+    <node x="0.0" y="473.0">bif3.swe1.tdd.fighter.DarthVader</node>
+    <node x="233.0" y="617.0">bif3.swe1.tdd.Main</node>
+    <node x="125.5" y="0.0">bif3.swe1.tdd.fighter.Fighter</node>
+    <node x="295.0" y="473.0">bif3.swe1.tdd.fighter.Yoda</node>
+    <node x="117.5" y="192.0">bif3.swe1.tdd.fighter.AbstractFighter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="bif3.swe1.tdd.fighter.Yoda" target="bif3.swe1.tdd.fighter.AbstractFighter">
+      <point x="0.0" y="-49.5" />
+      <point x="358.5" y="448.0" />
+      <point x="274.16666666666663" y="448.0" />
+      <point x="62.66666666666663" y="115.5" />
+    </edge>
+    <edge source="bif3.swe1.tdd.fighter.Luke" target="bif3.swe1.tdd.fighter.AbstractFighter">
+      <point x="0.0" y="-49.5" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="bif3.swe1.tdd.fighter.DarthVader" target="bif3.swe1.tdd.fighter.AbstractFighter">
+      <point x="0.0" y="-49.5" />
+      <point x="64.0" y="448.0" />
+      <point x="148.83333333333334" y="448.0" />
+      <point x="-62.66666666666666" y="115.5" />
+    </edge>
+    <edge source="bif3.swe1.tdd.fighter.AbstractFighter" target="bif3.swe1.tdd.fighter.Fighter">
+      <point x="0.0" y="-115.5" />
+      <point x="0.0" y="71.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.1" x="317.121212121212" y="351.3636363636363" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
