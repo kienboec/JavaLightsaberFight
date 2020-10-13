@@ -23,6 +23,10 @@ public class Combat {
     }
 
     private Optional<Fighter> limitedFightImplementation(boolean checkTurns, int turns) {
+        if (checkTurns && turns < 1) {
+            throw new IllegalArgumentException("Number of turns must be greater than 0!");
+        }
+
         System.out.printf("%s fights against %s\n", opponentA.getName(), opponentB.getName());
         System.out.println("Let the fight begin!");
         for (int turn = 1; ((!checkTurns) || turn <= turns) &&
@@ -45,7 +49,7 @@ public class Combat {
         return optWinner;
     }
 
-    private void gameMechanics(Aim aimA, Aim aimB) {
+    public void gameMechanics(Aim aimA, Aim aimB) {
         if (aimA == Aim.ATTACK && aimB == Aim.ATTACK) {
             opponentA.changeVitality(-1);
             opponentB.changeVitality(-1);
@@ -70,7 +74,7 @@ public class Combat {
         }
     }
 
-    private Optional<Fighter> getWinner() {
+    public Optional<Fighter> getWinner() {
         if (opponentA.isDead() && opponentB.isDead())
             return Optional.empty();    // all are dead - no winner
 
